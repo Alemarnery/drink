@@ -14,7 +14,6 @@ const RecetasProvider = (props) => {
   const [consultar, guardarConsultar] = useState(false);
 
   const { nombre, categoria } = busqueda;
-  console.log(nombre);
 
   useEffect(() => {
     if (consultar) {
@@ -32,6 +31,7 @@ const RecetasProvider = (props) => {
   return (
     <RecetasContext.Provider
       value={{
+        recetas,
         buscarRecetas,
         guardarConsultar,
       }}
